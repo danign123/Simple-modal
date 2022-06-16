@@ -1,0 +1,104 @@
+:root {
+--warning: rgb(214, 162, 18);
+--info: rgb(75, 113,227);
+--danger: #e7514f;
+--success: #37b068;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 200vh;
+}
+
+.modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 700px;
+    min-height: 250px;
+    padding: 30px 40px 20px 40px;
+    border-radius: 12px;
+}
+
+.modal-title {
+    font-size: 24px;
+    gap: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    color: var(--info);
+}
+
+.modal .success {
+    color: var(--success);
+}
+
+.modal .danger {
+    color: var(--danger);
+}
+
+.modal .warning {
+    color: var(--warning);
+}
+
+.modal-title-icon {
+    margin-bottom: 12px;
+    width: 30px;
+    height: 30px;
+}
+
+.modal-buttons button {
+    font-size: 16px;
+    letter-spacing: 2px;
+    width: 120px;
+    margin-top: 30px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.modal-buttons button:hover {
+    opacity: 80%;
+}
+
+.modal-accept {
+    background-color: var(--success);
+}
+
+.modal-decline {
+    background-color: var(--danger);
+}
+
+.modal-close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-close-icon:hover {
+    color: grey;
+}
